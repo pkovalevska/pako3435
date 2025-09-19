@@ -1,15 +1,32 @@
 # PROHI Dashboard Example
 
 **Author**: Patricia
-<!-- As main author, do not write anything in the line below.
-The collaborator will edit the line below in GitHub -->
 **Collaborator**:Qilu Wang
 
 _Note that this file is written in **MarkDown** language. A reference is available here: <https://www.markdownguide.org/basic-syntax/>_
 
-_Here you can include images, like the logo from SU_
 
-![Your dashboard](./assets/project-logo.jpg)
+## Website Overview
+This is an **Streamlit dashboard** that visualizes requirement in individual work 2. The website allows users to entries 3 data: studying program, reserach topic and decision about research topic. Second page About shows information about another project I did last sesmeter.
+
+## Pages
+- **Home:** Data entries and key statistics  
+- **About:** Summary of the project and methodology  
+
+## Screenshots
+### Home Page
+![Dashborad](assets/screenshotdsv/dashborad1.png)
+![Dashborad](assets/screenshotdsv/dashboard2.png)
+
+### About Page
+![About Page](screenshots/about_page.png)
+
+### Website link: 
+Local URL: http://localhost:8501
+Network URL: http://172.17.113.84:8501
+
+---------------------------------------------
+I keep the teacher part under this
 
 ## Introduction
 
