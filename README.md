@@ -15,7 +15,7 @@ This is an **Streamlit dashboard** that visualizes requirement in individual wor
 
 ## Screenshots
 ### Home Page
-![Dashborad](assets/screenshotdsv/dashborad1.png)
+![Dashborad](assets/screenshotdsv/dashboard1.png)
 ![Dashborad](assets/screenshotdsv/dashboard2.png)
 
 ### About Page
