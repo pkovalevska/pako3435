@@ -57,3 +57,62 @@ enhance the problem domain related to the selected dataset.
 #     'Select a range of values',
 #     0.0, 100.0, (25.0, 75.0)
 # )
+
+# Adding wigets to the main dashboard. Keeping previous content of teacher.
+import streamlit as st
+import pandas as pd
+import numpy as np
+
+# Page title
+st.title("🎓 Student Research Dashboard")
+
+st.markdown("This is the default dashboard page with input widgets, synthetic data, and a simple chart.")
+
+# --- Input Widgets ---
+st.header("📌 Research Information")
+
+# 1. Dropdown: Program of study
+program = st.selectbox(
+    "Select your program of study:",
+    ["Computer Science", "Data Science", "Public Health", "Nursing", "Biomedical Engineering"]
+)
+
+# 2. Multiple choice: Research topics in healthcare
+research_topics = st.multiselect(
+    "Select research topics in healthcare:",
+    [
+        "AI in Medical Imaging",
+        "Telemedicine",
+        "Wearable Health Devices",
+        "Genomics & Precision Medicine",
+        "Mental Health Analytics",
+        "Healthcare Policy & Management",
+        "Chronic Disease Prediction"
+    ]
+)
+
+# 3. Boolean: Have you decided on a topic?
+decided = st.checkbox("✅ Have you decided on your research topic?")
+
+# --- Synthetic Data ---
+st.header("📊 Example Data")
+
+# Generate random synthetic data
+np.random.seed(42)
+data = pd.DataFrame({
+    "Category": ["A", "B", "C", "D", "E"],
+    "Value": np.random.randint(10, 100, 5)
+})
+
+# Show data
+st.write("Here is some example data:")
+st.dataframe(data)
+
+# --- Chart ---
+st.bar_chart(data.set_index("Category"))
+
+# --- Summary ---
+st.header("📝 Summary")
+st.write(f"**Program Selected:** {program}")
+st.write(f"**Research Topics Chosen:** {', '.join(research_topics) if research_topics else 'None'}")
+st.write(f"**Decided on Topic?** {'Yes' if decided else 'No'}")
