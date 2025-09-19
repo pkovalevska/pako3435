@@ -19,7 +19,7 @@ This is an **Streamlit dashboard** that visualizes requirement in individual wor
 ![Dashborad](assets/screenshotdsv/dashboard2.png)
 
 ### About Page
-![About Page](screenshots/about_page.png)
+![About Page](assets/screenshotdsv/about.png)
 
 ### Website link: 
 Local URL: http://localhost:8501
