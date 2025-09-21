@@ -5,7 +5,7 @@ st.title("Patricija Kovalevska")
 st.markdown("""
 ## About My Project in the DSHI Course
 
-During the DSHI course, I worked on a project using the **UCI Heart Disease dataset** to predict whether a patient has heart disease. I cleaned and prepared the data, handled missing values, and selected key features like **chest pain type, blood pressure, and cholesterol**. I explored the data with charts and statistics to understand patterns and relationships between variables.
+During the DSHI course, I worked on a project using the **UCI Heart Disease dataset** to predict whether a patient has heart disease or not. I cleaned and prepared the data, handled missing values, and selected key features like **chest pain type, blood pressure, and cholesterol**. I explored the data with charts and statistics to understand patterns between variables.
 
 For modeling, I transformed the target into a **binary variable** and trained several classifiers, including:
 - Decision Trees  
@@ -14,6 +14,6 @@ For modeling, I transformed the target into a **binary variable** and trained se
 - SVM  
 - Gradient Boosting  
 
-**Random Forest** showed the best overall performance, with good accuracy and F1-score, while **KNN** had the highest recall. The project focused on analysis and modeling, and it was **not deployed the model**.
+**Random Forest** showed the best overall performance, with good accuracy and F1-score, while **KNN** had the highest recall. After analysis, it was decided **not deployed the model**.
 """)
 
