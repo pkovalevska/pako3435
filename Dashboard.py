@@ -65,7 +65,7 @@ import numpy as np
 
 # --- Page title ---
 st.title("🎓 Student Research Dashboard")
-st.markdown("This dashboard allows you to input your research info, edit synthetic data, and view charts.")
+st.markdown("This is the dashboard page with input widgets, synthetic data, and a chart.")
 
 # --- 1. Input Widgets ---
 st.header("📌 Research Information")
