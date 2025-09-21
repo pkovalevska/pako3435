@@ -74,7 +74,7 @@ st.header("📌 Research Information")
 # 1. Dropdown: Program of study
 program = st.selectbox(
     "Select your program of study:",
-    ["Computer Science", "Data Science", "Public Health", "Nursing", "Biomedical Engineering"]
+    ["Computer Science", "Data Science", "Public Health", "Health Informatics", "Biomedical Engineering"]
 )
 
 # 2. Multiple choice: Research topics in healthcare
@@ -116,3 +116,60 @@ st.header("📝 Summary")
 st.write(f"**Program Selected:** {program}")
 st.write(f"**Research Topics Chosen:** {', '.join(research_topics) if research_topics else 'None'}")
 st.write(f"**Decided on Topic?** {'Yes' if decided else 'No'}")
+
+
+####
+
+# --- 2. Multiple choice: Research topics in healthcare ---
+st.header("🔬 Select Research Topics in Healthcare")
+
+topics = [
+    "AI in Medical Imaging",
+    "Telemedicine",
+    "Wearable Health Devices",
+    "Genomics & Precision Medicine",
+    "Mental Health Analytics",
+    "Healthcare Policy & Management",
+    "Chronic Disease Prediction"
+]
+
+# Show all options with checkboxes
+research_topics = []
+for topic in topics:
+    if st.checkbox(topic, key=topic):
+        research_topics.append(topic)
+
+# --- 3. Boolean: Have you decided on a topic? ---
+st.header("✅ Decision on Topic")
+
+col1, col2 = st.columns(2)
+decided = None
+with col1:
+    if st.button("True"):
+        decided = True
+with col2:
+    if st.button("False"):
+        decided = False
+
+# --- Synthetic Data ---
+st.header("📊 Example Data")
+
+# Editable synthetic data
+st.write("You can edit this synthetic dataset:")
+default_data = pd.DataFrame({
+    "Category": ["AI", "Telemedicine", "Wearables", "Genomics", "Policy"],
+    "Value": np.random.randint(20, 100, 5)
+})
+
+data = st.data_editor(default_data, num_rows="dynamic")
+
+# Show chart
+st.bar_chart(data.set_index("Category"))
+
+# --- Summary ---
+st.header("📝 Summary")
+st.write(f"**Research Topics Chosen:** {', '.join(research_topics) if research_topics else 'None'}")
+if decided is not None:
+    st.write(f"**Decided on Topic?** {decided}")
+else:
+    st.write("**Decided on Topic?** Not answered yet")
