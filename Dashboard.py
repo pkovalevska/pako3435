@@ -140,36 +140,39 @@ for topic in topics:
         research_topics.append(topic)
 
 # --- 3. Boolean: Have you decided on a topic? ---
-st.header("✅ Decision on Topic")
+st.header("✅ Have you decided on a topic to write about?")
 
+# Use columns for Yes / No buttons
 col1, col2 = st.columns(2)
 decided = None
 with col1:
-    if st.button("True"):
+    if st.button("Yes"):
         decided = True
 with col2:
-    if st.button("False"):
+    if st.button("No"):
         decided = False
 
 # --- Synthetic Data ---
-st.header("📊 Example Data")
+st.header("📊 Example Research Data")
 
-# Editable synthetic data
 st.write("You can edit this synthetic dataset:")
+
+# Example data with categories and some realistic numbers
 default_data = pd.DataFrame({
     "Category": ["AI", "Telemedicine", "Wearables", "Genomics", "Policy"],
-    "Value": np.random.randint(20, 100, 5)
+    "Interest_Level": np.random.randint(1, 10, 5),  # e.g., on a scale of 1-10
+    "Estimated_Time_Hours": np.random.randint(5, 50, 5)  # hours required for research
 })
 
+# Make editable in Streamlit
 data = st.data_editor(default_data, num_rows="dynamic")
 
-# Show chart
-st.bar_chart(data.set_index("Category"))
+# Show a chart (you can pick which column to visualize)
+st.bar_chart(data.set_index("Category")["Interest_Level"])
 
 # --- Summary ---
 st.header("📝 Summary")
-st.write(f"**Research Topics Chosen:** {', '.join(research_topics) if research_topics else 'None'}")
 if decided is not None:
-    st.write(f"**Decided on Topic?** {decided}")
+    st.write(f"**Decided on Topic?** {'Yes' if decided else 'No'}")
 else:
     st.write("**Decided on Topic?** Not answered yet")
