@@ -15,11 +15,11 @@ This is an **Streamlit dashboard** for the individual HW2. The website allows us
 
 ## Screenshots
 ### Home Page
-![Dashborad](assets/screenshotdsv/dashboard1.png)
-![Dashborad](assets/screenshotdsv/dashboard2.png)
+![Dashborad](assets/screenshotdsv/DashboardFinal1.png)
+![Dashborad](assets/screenshotdsv/DashboardFinal2.png)
 
 ### About Page
-![About Page](assets/screenshotdsv/about.png)
+![About Page](assets/screenshotdsv/AboutFinal.png)
 
 ### Website link: 
 Local URL: http://localhost:8501
