@@ -26,7 +26,7 @@ Local URL: http://localhost:8501
 Network URL: http://172.17.113.84:8501
 
 ---------------------------------------------
-I keep the teacher part under this
+
 
 ## Introduction
 
