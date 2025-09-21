@@ -1,20 +1,20 @@
 # PROHI Dashboard Example
 
-**Author**: Patricia
+**Author**: Patricija
 **Collaborator**:Qilu Wang
 
 _Note that this file is written in **MarkDown** language. A reference is available here: <https://www.markdownguide.org/basic-syntax/>_
 
 
 ## Website Overview
-This is an **Streamlit dashboard** for the individual HW2. The website allows users to entries 3 data: studying program, reserach topics that they are interested in and decision about research topic. Second page About shows information about another project I did last sesmeter.
+This is an **Streamlit dashboard** for the individual HW2. The website allows users to entries 3 data: studying program, reserach topics that they are interested in and decision about research topic. Second page About shows information about another project I did last semester.
 
 ## Pages
 - **Dashboard:** Data entries  
 - **About:** Summary of the project  
 
 ## Screenshots
-### Home Page
+### Dashboard Page
 ![Dashborad](assets/screenshotdsv/DashboardFinal1.png)
 ![Dashborad](assets/screenshotdsv/DashboardFinal2.png)
 
