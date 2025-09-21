@@ -106,17 +106,17 @@ with col2:
 
 # --- 2. Synthetic Data ---
 st.header("📊 Example Research Data")
-st.write("You can edit this synthetic dataset:")
+
 
 default_data = pd.DataFrame({
     "Category": [
-        "AI in Medical Imaging",
+        "AI in MI",
         "Telemedicine",
-        "Wearable Health Devices",
-        "Genomics & Precision Medicine",
-        "Mental Health Analytics",
-        "Healthcare Policy & Management",
-        "Chronic Disease Prediction"
+        "Wearable HD",
+        "Genomics & PM",
+        "Mental Health",
+        "Healthcare Policy",
+        "Disease Prediction"
     ],
     "Interest_Level": np.random.randint(1, 10, 7)
 })
