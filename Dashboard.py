@@ -184,9 +184,7 @@ st.write(f"**Research Topics Chosen:** {', '.join(research_topics) if research_t
 st.write(f"**Decided on Topic?** {'Yes' if decided else 'No'}")
 
 ### hello
-import streamlit as st
-import pandas as pd
-import numpy as np
+
 
 # --- Page title ---
 st.title("🎓 Student Research Dashboard")
