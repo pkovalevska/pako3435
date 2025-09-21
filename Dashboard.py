@@ -63,25 +63,21 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-# Page title
+# --- Page title ---
 st.title("🎓 Student Research Dashboard")
+st.markdown("This dashboard allows you to input your research info, edit synthetic data, and view charts.")
 
-st.markdown("This is the dashboard page with input widgets, synthetic data, and a chart.")
-
-# --- Input Widgets ---
+# --- 1. Input Widgets ---
 st.header("📌 Research Information")
 
-# 1. Dropdown: Program of study
+# Dropdown: Program of study
 program = st.selectbox(
     "Select your program of study:",
     ["Computer Science", "Data Science", "Public Health", "Health Informatics", "Biomedical Engineering"]
 )
 
-####
-
-# --- 2. Multiple choice: Research topics in healthcare ---
+# Multiple choice: Research topics in healthcare
 st.header("🔬 Select Research Topics in Healthcare")
-
 topics = [
     "AI in Medical Imaging",
     "Telemedicine",
@@ -92,17 +88,13 @@ topics = [
     "Chronic Disease Prediction"
 ]
 
-# Show all options with checkboxes
 research_topics = []
 for topic in topics:
     if st.checkbox(topic, key=topic):
         research_topics.append(topic)
 
-# --- 3. Boolean: Have you decided on a topic? ---
-
+# Boolean: Have you decided on a topic?
 st.header("✅ Have you decided on a topic to write about?")
-
-# Use columns for Yes / No buttons
 col1, col2 = st.columns(2)
 decided = None
 with col1:
@@ -114,26 +106,32 @@ with col2:
 
 # --- 2. Synthetic Data ---
 st.header("📊 Example Research Data")
-
 st.write("You can edit this synthetic dataset:")
 
-# Example data with only one metric: Interest_Level
 default_data = pd.DataFrame({
-    "Category": ["AI", "Telemedicine", "Wearables", "Genomics", "Policy"],
-    "Interest_Level": np.random.randint(1, 10, 5)
+    "Category": [
+        "AI in Medical Imaging",
+        "Telemedicine",
+        "Wearable Health Devices",
+        "Genomics & Precision Medicine",
+        "Mental Health Analytics",
+        "Healthcare Policy & Management",
+        "Chronic Disease Prediction"
+    ],
+    "Interest_Level": np.random.randint(1, 10, 7)
 })
 
-# Make editable in Streamlit
+# Editable in Streamlit
 data = st.data_editor(default_data, num_rows="dynamic")
 
-# Show a chart with horizontal labels
+# Show chart
 st.bar_chart(data.set_index("Category")["Interest_Level"])
 
-# --- Summary ---
+# --- 3. Summary ---
 st.header("📝 Summary")
 st.write(f"**Program Selected:** {program}")
 st.write(f"**Research Topics Chosen:** {', '.join(research_topics) if research_topics else 'None'}")
-st.write(f"**Decided on Topic?** {'Yes' if decided else 'No'}")
+st.write(f"**Decided on Topic?** {'Yes' if decided else 'Not answered yet' if decided is None else 'No'}")
 
 
 
