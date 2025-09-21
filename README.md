@@ -7,11 +7,11 @@ _Note that this file is written in **MarkDown** language. A reference is availab
 
 
 ## Website Overview
-This is an **Streamlit dashboard** that visualizes requirement in individual work 2. The website allows users to entries 3 data: studying program, reserach topic and decision about research topic. Second page About shows information about another project I did last sesmeter.
+This is an **Streamlit dashboard** for the individual HW2. The website allows users to entries 3 data: studying program, reserach topics that they are interested in and decision about research topic. Second page About shows information about another project I did last sesmeter.
 
 ## Pages
-- **Home:** Data entries and key statistics  
-- **About:** Summary of the project and methodology  
+- **Dashboard:** Data entries  
+- **About:** Summary of the project  
 
 ## Screenshots
 ### Home Page
